@@ -1,0 +1,5 @@
+{
+  "name": "SIMPEG SMPN 3 Pacet",
+  "description": "Aplikasi Manajemen Kepegawaian SMPN 3 Pacet. Fitur input data pegawai lengkap, upload dokumen, dan monitoring kelengkapan data.",
+  "requestFramePermissions": []
+}
