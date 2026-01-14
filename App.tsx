@@ -76,18 +76,29 @@ function App() {
       try {
         const data = await api.fetchAll();
         
-        // If data from API exists and has employees, use it.
-        // If API returns success but 0 employees, OR api call fails, fall back to INITIAL_DUK_DATA
+        // KONDISI 1: API Berhasil dan ada datanya (Sudah pernah dipakai)
         if (data && data.status === 'success' && data.employees && data.employees.length > 0) {
             setEmployees(data.employees);
             setDocDefinitions(data.definitions || []);
             setSystemUsers(data.users || []);
-        } else {
-            console.warn("API empty or failed, loading default DUK data.");
+            console.log("Data loaded from Server.");
+        } 
+        // KONDISI 2: API Berhasil tapi KOSONG (Baru pertama kali setup)
+        else if (data && data.status === 'success' && (!data.employees || data.employees.length === 0)) {
+            console.warn("Server is empty. Seeding initial DUK data to Server...");
             const defaultEmployees = INITIAL_DUK_DATA.map(convertDukToEmployee);
             setEmployees(defaultEmployees);
-            setDocDefinitions(data?.definitions || []); // Keep defs if any
+            setDocDefinitions(data?.definitions || []); 
             setSystemUsers(data?.users || []);
+            
+            // Kirim data default ke server agar tersimpan untuk perangkat lain
+            await api.seedInitialData(defaultEmployees);
+        }
+        // KONDISI 3: API Gagal / Error
+        else {
+            console.warn("API failed, loading local default only (Changes will not be saved to cloud).");
+            const defaultEmployees = INITIAL_DUK_DATA.map(convertDukToEmployee);
+            setEmployees(defaultEmployees);
         }
       } catch (e) {
         console.error("Critical fetch error, using defaults", e);
