@@ -54,7 +54,7 @@ export const DUKPage: React.FC<DUKPageProps> = ({ employees, onUpdate, onDelete 
       jabatanNama: "", jabatanTmt: "",
       mkGolTh: "0", mkGolBln: "0", mkSelTh: "0", mkSelBln: "0",
       pendNama: "", pendTh: "", pendTk: "", pendJur: "",
-      tglLahir: "", masaKpyad: "-", 
+      tempatLahir: "", tglLahir: "", masaKpyad: "-", 
       tglSKBerkala: "", masaKenaikanBerkala: "",
       catatanMutasi: "-", ket: ""
   };
@@ -84,6 +84,7 @@ export const DUKPage: React.FC<DUKPageProps> = ({ employees, onUpdate, onDelete 
          pendTh: emp.gradYear?.toString() || "-",
          pendTk: emp.lastEducation || "-",
          pendJur: emp.major || "-",
+         tempatLahir: emp.birthPlace || "-",
          tglLahir: emp.birthDate || "-",
          masaKpyad: emp.masaKpyad || "-",
          tglSKBerkala: emp.tglSKBerkala || "",
@@ -151,6 +152,7 @@ export const DUKPage: React.FC<DUKPageProps> = ({ employees, onUpdate, onDelete 
         gradYear: parseInt(formData.pendTh),
         lastEducation: formData.pendTk,
         major: formData.pendJur,
+        birthPlace: formData.tempatLahir,
         birthDate: formData.tglLahir,
         masaKpyad: formData.masaKpyad,
         tglSKBerkala: formData.tglSKBerkala,
@@ -166,7 +168,6 @@ export const DUKPage: React.FC<DUKPageProps> = ({ employees, onUpdate, onDelete 
         nik: originalEmp.nik || '',
         email: originalEmp.email || '',
         phone: originalEmp.phone || '',
-        birthPlace: originalEmp.birthPlace || '',
         religion: originalEmp.religion || '',
         maritalStatus: originalEmp.maritalStatus || '',
         address: originalEmp.address || '',
@@ -300,7 +301,9 @@ export const DUKPage: React.FC<DUKPageProps> = ({ employees, onUpdate, onDelete 
                   <td className="px-3 py-2 border-r border-b border-gray-200 text-center">{row.pendTk}</td>
                   <td className="px-3 py-2 border-r border-b border-gray-200">{row.pendJur}</td>
                   
-                  <td className="px-3 py-2 border-r border-b border-gray-200 text-center">{row.tglLahir}</td>
+                  <td className="px-3 py-2 border-r border-b border-gray-200 text-center">
+                    {row.tempatLahir ? `${row.tempatLahir}, ` : ''}{row.tglLahir}
+                  </td>
                   <td className="px-3 py-2 border-r border-b border-gray-200 text-center">{row.masaKpyad}</td>
                   <td className="px-3 py-2 border-r border-b border-gray-200 text-center bg-yellow-50/50 font-medium text-gray-700">
                     {row.tglSKBerkala}
@@ -355,6 +358,7 @@ export const DUKPage: React.FC<DUKPageProps> = ({ employees, onUpdate, onDelete 
                         </select>
                     </div>
                     <div className="grid grid-cols-2 gap-2">
+                        <input className="input-field" placeholder="Tempat Lahir" value={formData.tempatLahir} onChange={e => handleInputChange('tempatLahir', e.target.value)} />
                         <input className="input-field" type="date" placeholder="Tgl Lahir" value={formData.tglLahir} onChange={e => handleInputChange('tglLahir', e.target.value)} />
                     </div>
                   </div>

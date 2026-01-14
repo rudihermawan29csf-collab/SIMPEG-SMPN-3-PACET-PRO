@@ -31,7 +31,7 @@ export const INITIAL_DUK_DATA: RawDukData[] = [
     jabatanNama: "Pembina Utama Muda", jabatanTmt: "1989-01-01", 
     mkGolTh: "10", mkGolBln: "6", mkSelTh: "34", mkSelBln: "3", 
     pendNama: "STMI", pendTh: "2009", pendTk: "Pasca sarjana", pendJur: "Magister Manajemen", 
-    tglLahir: "1966-05-18", masaKpyad: "-", 
+    tempatLahir: "Nganjuk", tglLahir: "1966-05-18", masaKpyad: "-", 
     tglSKBerkala: "", masaKenaikanBerkala: "-", 
     catatanMutasi: "-", ket: "" 
   },
@@ -41,7 +41,7 @@ export const INITIAL_DUK_DATA: RawDukData[] = [
     jabatanNama: "Guru Muda", jabatanTmt: "2020-09-30", 
     mkGolTh: "5", mkGolBln: "3", mkSelTh: "22", mkSelBln: "7", 
     pendNama: "Un. Jenggala Sidoarjo", pendTh: "1992", pendTk: "Sarjana", pendJur: "Pend. Bhs & Seni", 
-    tglLahir: "1967-06-28", masaKpyad: "-", 
+    tempatLahir: "Mojokerto", tglLahir: "1967-06-28", masaKpyad: "-", 
     tglSKBerkala: "2023-01-01", masaKenaikanBerkala: "", 
     catatanMutasi: "-", ket: "" 
   },
@@ -51,7 +51,7 @@ export const INITIAL_DUK_DATA: RawDukData[] = [
     jabatanNama: "Guru Muda", jabatanTmt: "2020-09-30", 
     mkGolTh: "5", mkGolBln: "3", mkSelTh: "20", mkSelBln: "0", 
     pendNama: "STIESIA Surabaya", pendTh: "2004", pendTk: "Sarjana", pendJur: "Managemen Ekonomi", 
-    tglLahir: "1980-03-04", masaKpyad: "-", 
+    tempatLahir: "Mojokerto", tglLahir: "1980-03-04", masaKpyad: "-", 
     tglSKBerkala: "", masaKenaikanBerkala: "-", 
     catatanMutasi: "-", ket: "" 
   },
@@ -61,7 +61,7 @@ export const INITIAL_DUK_DATA: RawDukData[] = [
     jabatanNama: "Guru Madya", jabatanTmt: "2014-04-01", 
     mkGolTh: "5", mkGolBln: "3", mkSelTh: "14", mkSelBln: "0", 
     pendNama: "Univ.Barawijaya TBN", pendTh: "2007", pendTk: "Sarjana", pendJur: "Pend.Bahasa Inggris", 
-    tglLahir: "1975-11-08", masaKpyad: "-", 
+    tempatLahir: "Mojokerto", tglLahir: "1975-11-08", masaKpyad: "-", 
     tglSKBerkala: "", masaKenaikanBerkala: "-", 
     catatanMutasi: "-", ket: "" 
   },
@@ -71,7 +71,7 @@ export const INITIAL_DUK_DATA: RawDukData[] = [
     jabatanNama: "Guru Madya", jabatanTmt: "2025-04-01", 
     mkGolTh: "5", mkGolBln: "0", mkSelTh: "0", mkSelBln: "0", 
     pendNama: "UNESA", pendTh: "2016", pendTk: "Sarjana", pendJur: "Penjaskes", 
-    tglLahir: "1992-03-16", masaKpyad: "-", 
+    tempatLahir: "Mojokerto", tglLahir: "1992-03-16", masaKpyad: "-", 
     tglSKBerkala: "", masaKenaikanBerkala: "-", 
     catatanMutasi: "-", ket: "" 
   },
@@ -81,7 +81,7 @@ export const INITIAL_DUK_DATA: RawDukData[] = [
     jabatanNama: "Guru Madya", jabatanTmt: "2025-12-01", 
     mkGolTh: "5", mkGolBln: "0", mkSelTh: "0", mkSelBln: "0", 
     pendNama: "UPTDU Jombang", pendTh: "2013", pendTk: "Sarjana", pendJur: "Pend. Agama Islam", 
-    tglLahir: "1989-10-29", masaKpyad: "-", 
+    tempatLahir: "Mojokerto", tglLahir: "1989-10-29", masaKpyad: "-", 
     tglSKBerkala: "", masaKenaikanBerkala: "-", 
     catatanMutasi: "-", ket: "" 
   },
@@ -91,7 +91,7 @@ export const INITIAL_DUK_DATA: RawDukData[] = [
     jabatanNama: "Guru Madya", jabatanTmt: "2025-12-01", 
     mkGolTh: "5", mkGolBln: "0", mkSelTh: "0", mkSelBln: "0", 
     pendNama: "U. Kanjuruan Malang", pendTh: "2017", pendTk: "Sarjana", pendJur: "Bimbingan Dan Konseling", 
-    tglLahir: "1994-10-02", masaKpyad: "-", 
+    tempatLahir: "Mojokerto", tglLahir: "1994-10-02", masaKpyad: "-", 
     tglSKBerkala: "", masaKenaikanBerkala: "-", 
     catatanMutasi: "-", ket: "" 
   },
@@ -101,7 +101,7 @@ export const INITIAL_DUK_DATA: RawDukData[] = [
     jabatanNama: "Guru Ahli Pertama", jabatanTmt: "2024-03-07", 
     mkGolTh: "1", mkGolBln: "9", mkSelTh: "19", mkSelBln: "5", 
     pendNama: "IKIP PGRI Mojokerto", pendTh: "1997", pendTk: "Sarjana", pendJur: "PMP dan KN", 
-    tglLahir: "1973-11-29", masaKpyad: "-", 
+    tempatLahir: "Mojokerto", tglLahir: "1973-11-29", masaKpyad: "-", 
     tglSKBerkala: "", masaKenaikanBerkala: "-", 
     catatanMutasi: "-", ket: "" 
   },
@@ -111,7 +111,7 @@ export const INITIAL_DUK_DATA: RawDukData[] = [
     jabatanNama: "Guru Ahli Pertama", jabatanTmt: "2024-03-07", 
     mkGolTh: "1", mkGolBln: "9", mkSelTh: "19", mkSelBln: "5", 
     pendNama: "Univ. Darul 'Ulum Jombang", pendTh: "2008", pendTk: "Sarjana", pendJur: "Ilmu Pendidikan", 
-    tglLahir: "1982-02-22", masaKpyad: "-", 
+    tempatLahir: "Mojokerto", tglLahir: "1982-02-22", masaKpyad: "-", 
     tglSKBerkala: "", masaKenaikanBerkala: "-", 
     catatanMutasi: "-", ket: "" 
   },
@@ -121,7 +121,7 @@ export const INITIAL_DUK_DATA: RawDukData[] = [
     jabatanNama: "Guru Ahli Pertama", jabatanTmt: "2024-03-01", 
     mkGolTh: "1", mkGolBln: "8", mkSelTh: "17", mkSelBln: "2", 
     pendNama: "STKIP PGRI Mojokerto", pendTh: "1998", pendTk: "Sarjana", pendJur: "Pend. Matematika", 
-    tglLahir: "1968-07-05", masaKpyad: "-", 
+    tempatLahir: "Mojokerto", tglLahir: "1968-07-05", masaKpyad: "-", 
     tglSKBerkala: "", masaKenaikanBerkala: "-", 
     catatanMutasi: "-", ket: "" 
   },
@@ -131,7 +131,7 @@ export const INITIAL_DUK_DATA: RawDukData[] = [
     jabatanNama: "Guru Ahli Pertama", jabatanTmt: "2025-03-01", 
     mkGolTh: "0", mkGolBln: "10", mkSelTh: "19", mkSelBln: "5", 
     pendNama: "STIKIP PGRI Jombang", pendTh: "2010", pendTk: "Sarjana", pendJur: "Pend. Bahasa dan Seni", 
-    tglLahir: "1985-07-03", masaKpyad: "-", 
+    tempatLahir: "Mojokerto", tglLahir: "1985-07-03", masaKpyad: "-", 
     tglSKBerkala: "", masaKenaikanBerkala: "-", 
     catatanMutasi: "-", ket: "" 
   },
@@ -141,7 +141,7 @@ export const INITIAL_DUK_DATA: RawDukData[] = [
     jabatanNama: "Guru Ahli Pertama", jabatanTmt: "2025-03-01", 
     mkGolTh: "0", mkGolBln: "10", mkSelTh: "-", mkSelBln: "-", 
     pendNama: "Univ. Negeri Malang", pendTh: "2007", pendTk: "Sarjana", pendJur: "Pendidikan Ekonomi", 
-    tglLahir: "1985-01-31", masaKpyad: "-", 
+    tempatLahir: "Mojokerto", tglLahir: "1985-01-31", masaKpyad: "-", 
     tglSKBerkala: "", masaKenaikanBerkala: "-", 
     catatanMutasi: "-", ket: "" 
   },
@@ -151,7 +151,7 @@ export const INITIAL_DUK_DATA: RawDukData[] = [
     jabatanNama: "Guru Ahli Pertama", jabatanTmt: "2025-10-01", 
     mkGolTh: "0", mkGolBln: "0", mkSelTh: "-", mkSelBln: "-", 
     pendNama: "UNMU Malang", pendTh: "2023", pendTk: "Sarjana", pendJur: "Pendidikan Matematika FKIP", 
-    tglLahir: "2001-05-07", masaKpyad: "-", 
+    tempatLahir: "Mojokerto", tglLahir: "2001-05-07", masaKpyad: "-", 
     tglSKBerkala: "", masaKenaikanBerkala: "-", 
     catatanMutasi: "-", ket: "" 
   },
@@ -161,7 +161,7 @@ export const INITIAL_DUK_DATA: RawDukData[] = [
     jabatanNama: "GTT", jabatanTmt: "2020-07-08", 
     mkGolTh: "-", mkGolBln: "-", mkSelTh: "4", mkSelBln: "5", 
     pendNama: "UNESA", pendTh: "2014", pendTk: "Sarjana", pendJur: "Pend. Olah Raga", 
-    tglLahir: "1991-01-25", masaKpyad: "-", 
+    tempatLahir: "Mojokerto", tglLahir: "1991-01-25", masaKpyad: "-", 
     tglSKBerkala: "", masaKenaikanBerkala: "-", 
     catatanMutasi: "-", ket: "" 
   },
@@ -171,7 +171,7 @@ export const INITIAL_DUK_DATA: RawDukData[] = [
     jabatanNama: "GTT", jabatanTmt: "2023-07-17", 
     mkGolTh: "-", mkGolBln: "-", mkSelTh: "2", mkSelBln: "5", 
     pendNama: "UNESA", pendTh: "2013", pendTk: "Sarjana", pendJur: "Fisika", 
-    tglLahir: "1987-10-28", masaKpyad: "-", 
+    tempatLahir: "Subang", tglLahir: "1987-10-28", masaKpyad: "-", 
     tglSKBerkala: "", masaKenaikanBerkala: "-", 
     catatanMutasi: "-", ket: "" 
   },
@@ -181,7 +181,7 @@ export const INITIAL_DUK_DATA: RawDukData[] = [
     jabatanNama: "GTT", jabatanTmt: "2025-08-07", 
     mkGolTh: "-", mkGolBln: "-", mkSelTh: "0", mkSelBln: "4", 
     pendNama: "UNESA", pendTh: "2011", pendTk: "Sarjana", pendJur: "Pend. IPA", 
-    tglLahir: "1989-01-31", masaKpyad: "-", 
+    tempatLahir: "Bojonegoro", tglLahir: "1989-01-31", masaKpyad: "-", 
     tglSKBerkala: "", masaKenaikanBerkala: "-", 
     catatanMutasi: "-", ket: "" 
   },
@@ -191,7 +191,7 @@ export const INITIAL_DUK_DATA: RawDukData[] = [
     jabatanNama: "GTT", jabatanTmt: "2025-08-07", 
     mkGolTh: "-", mkGolBln: "-", mkSelTh: "0", mkSelBln: "4", 
     pendNama: "UNIDHA Malang", pendTh: "2013", pendTk: "Sarjana", pendJur: "Pend. Bahasa dan Sastra Indonesia", 
-    tglLahir: "1991-01-22", masaKpyad: "-", 
+    tempatLahir: "Mojokerto", tglLahir: "1991-01-22", masaKpyad: "-", 
     tglSKBerkala: "", masaKenaikanBerkala: "-", 
     catatanMutasi: "-", ket: "" 
   },
@@ -201,7 +201,7 @@ export const INITIAL_DUK_DATA: RawDukData[] = [
     jabatanNama: "GTT", jabatanTmt: "2025-08-07", 
     mkGolTh: "-", mkGolBln: "-", mkSelTh: "0", mkSelBln: "4", 
     pendNama: "STKW Surabaya", pendTh: "2020", pendTk: "Sarjana", pendJur: "Seni Rupa Murni", 
-    tglLahir: "1998-06-14", masaKpyad: "-", 
+    tempatLahir: "Sumenep", tglLahir: "1998-06-14", masaKpyad: "-", 
     tglSKBerkala: "", masaKenaikanBerkala: "-", 
     catatanMutasi: "-", ket: "" 
   },
@@ -211,7 +211,7 @@ export const INITIAL_DUK_DATA: RawDukData[] = [
     jabatanNama: "Operator Layanan Operasional", jabatanTmt: "2025-10-01", 
     mkGolTh: "0", mkGolBln: "0", mkSelTh: "19", mkSelBln: "5", 
     pendNama: "MAN Mojosari", pendTh: "1998", pendTk: "SMA", pendJur: "IPS", 
-    tglLahir: "1979-04-21", masaKpyad: "-", 
+    tempatLahir: "Mojokerto", tglLahir: "1979-04-21", masaKpyad: "-", 
     tglSKBerkala: "", masaKenaikanBerkala: "-", 
     catatanMutasi: "-", ket: "" 
   },
@@ -221,7 +221,7 @@ export const INITIAL_DUK_DATA: RawDukData[] = [
     jabatanNama: "Operator Layanan Operasional", jabatanTmt: "2025-10-01", 
     mkGolTh: "0", mkGolBln: "0", mkSelTh: "19", mkSelBln: "5", 
     pendNama: "STM KITA BHAKTI", pendTh: "2000", pendTk: "STM", pendJur: "Mekanik Umum", 
-    tglLahir: "1981-11-01", masaKpyad: "-", 
+    tempatLahir: "Mojokerto", tglLahir: "1981-11-01", masaKpyad: "-", 
     tglSKBerkala: "", masaKenaikanBerkala: "-", 
     catatanMutasi: "-", ket: "" 
   },
@@ -231,7 +231,7 @@ export const INITIAL_DUK_DATA: RawDukData[] = [
     jabatanNama: "Operator Layanan Operasional", jabatanTmt: "2025-10-01", 
     mkGolTh: "0", mkGolBln: "0", mkSelTh: "2", mkSelBln: "5", 
     pendNama: "Universitas Terbuka", pendTh: "2014", pendTk: "Sarjana", pendJur: "PGSD", 
-    tglLahir: "1990-02-09", masaKpyad: "-", 
+    tempatLahir: "Sidoarjo", tglLahir: "1990-02-09", masaKpyad: "-", 
     tglSKBerkala: "", masaKenaikanBerkala: "-", 
     catatanMutasi: "-", ket: "" 
   },
@@ -241,7 +241,7 @@ export const INITIAL_DUK_DATA: RawDukData[] = [
     jabatanNama: "Operator Layanan Operasional", jabatanTmt: "2025-10-01", 
     mkGolTh: "0", mkGolBln: "0", mkSelTh: "8", mkSelBln: "0", 
     pendNama: "SMK Dharma Bhakti", pendTh: "2004", pendTk: "SMK", pendJur: "Teknik Mesin", 
-    tglLahir: "1984-05-16", masaKpyad: "-", 
+    tempatLahir: "Surabaya", tglLahir: "1984-05-16", masaKpyad: "-", 
     tglSKBerkala: "", masaKenaikanBerkala: "-", 
     catatanMutasi: "-", ket: "" 
   },

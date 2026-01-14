@@ -162,6 +162,7 @@ export interface RawDukData {
   pendTh: string;
   pendTk: string;
   pendJur: string;
+  tempatLahir?: string; // Added field
   tglLahir: string;
   masaKpyad: string;
   tglSKBerkala: string;

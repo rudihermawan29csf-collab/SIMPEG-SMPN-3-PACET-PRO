@@ -6,8 +6,55 @@ import { EmployeeForm } from './components/EmployeeForm';
 import { EmployeeList } from './components/EmployeeList';
 import { AdminSettings } from './components/AdminSettings';
 import { DUKPage } from './components/DUKPage';
-import { User, Role, Employee, EmpStatus, Gender, DocumentDefinition } from './types';
+import { User, Role, Employee, EmpStatus, Gender, DocumentDefinition, RawDukData } from './types';
 import { api } from './services/api';
+import { INITIAL_DUK_DATA } from './constants';
+
+// Helper to convert RawDukData to Employee for default data
+const convertDukToEmployee = (duk: RawDukData): Employee => {
+  let status = EmpStatus.HONORER;
+  if (duk.pangkatNama?.includes('PPPK') || (duk.nip && duk.nip.length > 18)) status = EmpStatus.PPPK;
+  if (duk.pangkatNama?.includes('/') || (duk.nip && duk.nip.length > 10 && !duk.pangkatNama?.includes('PPPK'))) status = EmpStatus.PNS;
+  if (duk.jabatanNama?.includes('GTT')) status = EmpStatus.GTT;
+
+  return {
+    id: `emp-${duk.id}`,
+    fullName: duk.nama,
+    nik: duk.nip && duk.nip !== '-' ? duk.nip : '',
+    nip: duk.nip !== '-' ? duk.nip : '',
+    birthPlace: duk.tempatLahir || 'Mojokerto',
+    birthDate: duk.tglLahir !== '-' ? duk.tglLahir : '',
+    gender: duk.lp === 'L' ? Gender.MALE : Gender.FEMALE,
+    religion: 'Islam',
+    maritalStatus: 'Kawin',
+    address: '-',
+    phone: '-',
+    email: `${duk.nama.replace(/[^a-zA-Z0-9]/g, '.').toLowerCase()}@sekolah.id`,
+    empStatus: status,
+    empType: duk.jabatanNama.includes('Guru') ? 'Guru' : 'Tendik',
+    position: duk.jabatanNama,
+    unit: 'SMPN 3 PACET',
+    tmtStart: duk.jabatanTmt !== '-' ? duk.jabatanTmt : '',
+    pangkat: duk.pangkatNama,
+    tmtGolongan: duk.pangkatTmt !== '-' ? duk.pangkatTmt : '',
+    workingYear: parseInt(duk.mkGolTh) || 0,
+    workingMonth: parseInt(duk.mkGolBln) || 0,
+    totalWorkingYear: parseInt(duk.mkSelTh) || 0,
+    totalWorkingMonth: parseInt(duk.mkSelBln) || 0,
+    university: duk.pendNama,
+    gradYear: parseInt(duk.pendTh) || 0,
+    lastEducation: duk.pendTk,
+    major: duk.pendJur,
+    karpeg: duk.karpeg !== '-' ? duk.karpeg : '',
+    tglSKBerkala: duk.tglSKBerkala,
+    catatanMutasi: duk.catatanMutasi,
+    completionPercentage: 20,
+    verificationStatus: 'Belum Diverifikasi',
+    lastUpdated: new Date().toISOString(),
+    documents: [],
+    familyMembers: []
+  };
+};
 
 // --- APP COMPONENT ---
 function App() {
@@ -26,12 +73,26 @@ function App() {
   useEffect(() => {
     const loadData = async () => {
       setIsLoading(true);
-      const data = await api.fetchAll();
-      if (data && data.status === 'success') {
-          setEmployees(data.employees || []);
-          setDocDefinitions(data.definitions || []);
-          // Map backend users to User type if needed, primarily used for login check
-          setSystemUsers(data.users || []); 
+      try {
+        const data = await api.fetchAll();
+        
+        // If data from API exists and has employees, use it.
+        // If API returns success but 0 employees, OR api call fails, fall back to INITIAL_DUK_DATA
+        if (data && data.status === 'success' && data.employees && data.employees.length > 0) {
+            setEmployees(data.employees);
+            setDocDefinitions(data.definitions || []);
+            setSystemUsers(data.users || []);
+        } else {
+            console.warn("API empty or failed, loading default DUK data.");
+            const defaultEmployees = INITIAL_DUK_DATA.map(convertDukToEmployee);
+            setEmployees(defaultEmployees);
+            setDocDefinitions(data?.definitions || []); // Keep defs if any
+            setSystemUsers(data?.users || []);
+        }
+      } catch (e) {
+        console.error("Critical fetch error, using defaults", e);
+        const defaultEmployees = INITIAL_DUK_DATA.map(convertDukToEmployee);
+        setEmployees(defaultEmployees);
       }
       setIsLoading(false);
     };
